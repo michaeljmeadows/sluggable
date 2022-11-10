@@ -1,0 +1,21 @@
+{
+    "name": "michaeljmeadows/sluggable",
+    "description": "A simple trait to generate model slugs.",
+    "type": "library",
+    "require": {
+        "laravel/framework": ">=8.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "michaeljmeadows\\Traits\\": "src/traits/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Michael Meadows",
+            "email": "michaeljmeadows86@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
