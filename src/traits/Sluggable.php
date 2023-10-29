@@ -3,9 +3,21 @@
 namespace michaeljmeadows\Traits;
 
 use ErrorException;
+use Illuminate\Database\Eloquent\Model;
 
 trait Sluggable
 {
+    public static function bootCreatedBy()
+    {
+        static::creating(function (Model $model) {
+            $model->setSlug();
+        });
+
+        static::updating(function (Model $model) {
+            $model->setSlug();
+        });
+    }
+
     public function getInvalidSlugs(): array
     {
         return $this->invalidSlugs ?? [
