@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 trait Sluggable
 {
-    public static function bootCreatedBy()
+    public static function bootSluggable()
     {
         static::creating(function (Model $model) {
             $model->setSlug();
